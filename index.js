@@ -2,4 +2,4 @@
 
 const MongoMockupServer = require('./src/mongo_mockup_server');
 
-module.exports = MongoMockupServer
+module.exports = MongoMockupServer;
