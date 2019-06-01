@@ -13,8 +13,8 @@ The purpose of this package is to make it easier to use mockup server for unit t
 ## How To Use
 
 ### Initialization
-``const mockupServer = new MockupServer()``
+``const mongoMockupServer = new MongoMockupServer()``
 
 ### Destroy
-``mockupServer.cleanup()``
+``mongoMockupServer.cleanup()``
 

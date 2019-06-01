@@ -1,5 +1,5 @@
 {
-  "name": "mockup-server",
+  "name": "mogodb-mockup-server",
   "version": "1.0.0",
   "description": "This package is used to setup mockup mongodb server for testing purposes",
   "main": "index.js",
