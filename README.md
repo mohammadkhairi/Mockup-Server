@@ -23,7 +23,9 @@ before(() => {
   mongoMockupServer = new MongoMockupServer();
 });
 ```
+
 <br />
+
 ## Destroy
 ``mongoMockupServer.cleanup()``
 
