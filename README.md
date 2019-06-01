@@ -1,20 +1,38 @@
 # Mongodb Mockup Server Package
 
 ## Purpose
-The purpose of this package is to make it easier to use mockup server for unit testing
+to mock mongodb during testing
 
 ## Installation
 ``npm install https://github.com/mohammadkhairi/Mockup-Server.git``
 
-## How to import
+## Import
 `` const MongoMockupServer = require('mongodb-mockup-server') ``
 
 
-## How To Use
+<br /><br />
 
-### Initialization
+# How To Use
+
+## Initialization
 ``const mongoMockupServer = new MongoMockupServer()``
 
-### Destroy
+### Example
+```
+before(() => {
+  mongoMockupServer = new MongoMockupServer();
+});
+```
+
+<br />
+
+## Destroy
 ``mongoMockupServer.cleanup()``
+
+### Example
+```
+after(() => {
+   mongoMockupServer.cleanup();
+});
+```
 
