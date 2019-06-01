@@ -9,7 +9,9 @@ to mock mongodb during testing
 ## Import
 `` const MongoMockupServer = require('mongodb-mockup-server') ``
 
-\n\n
+
+<br /><br />
+
 # How To Use
 
 ## Initialization
@@ -21,7 +23,7 @@ before(() => {
   mongoMockupServer = new MongoMockupServer();
 });
 ``
-
+<br />
 ## Destroy
 ``mongoMockupServer.cleanup()``
 
