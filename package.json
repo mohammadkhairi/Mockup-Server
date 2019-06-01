@@ -1,0 +1,24 @@
+{
+  "name": "mockup-server",
+  "version": "1.0.0",
+  "description": "This package is used to setup mockup mongodb server for testing purposes",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test/*.test.js"
+  },
+  "keywords": [
+    "mockup",
+    "server"
+  ],
+  "author": "Mohammad Khairi Bin Ali",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^6.1.4"
+  },
+  "dependencies": {
+    "mongodb-memory-server": "^5.1.2",
+    "mongoose": "^5.5.11",
+    "save": "^2.4.0"
+  }
+}
