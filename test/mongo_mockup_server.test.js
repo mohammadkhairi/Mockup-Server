@@ -3,7 +3,7 @@
 const { expect } = require('chai');
 const mongoose = require('mongoose');
 
-const MongoMockupServer = require('../src/MongoMockupServer');
+const MongoMockupServer = require('../src/mongo_mockup_server');
 
 describe('Mockup Server', () => {
     let TestModel, mongoMockupServer;
