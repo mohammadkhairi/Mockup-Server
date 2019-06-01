@@ -3,13 +3,13 @@
 const { expect } = require('chai');
 const mongoose = require('mongoose');
 
-const MockupServer = require('../src/MockupServer');
+const MongoMockupServer = require('../src/MongoMockupServer');
 
 describe('Mockup Server', () => {
-    let TestModel, mockupServer;
+    let TestModel, mongoMockupServer;
 
     before(() => {
-        mockupServer = new MockupServer();
+        mongoMockupServer = new MongoMockupServer();
 
         TestModel = mongoose.model('TestModel', new mongoose.Schema({
             name: String,
@@ -18,7 +18,7 @@ describe('Mockup Server', () => {
     });
 
     after(() => {
-        mockupServer.cleanup();
+        mongoMockupServer.cleanup();
     });
 
     describe('when  data into dummy model while running Mockup Mongodb Server', () => {

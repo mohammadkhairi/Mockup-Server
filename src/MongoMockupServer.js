@@ -4,7 +4,7 @@ const { MongoMemoryServer } = require('mongodb-memory-server');
 
 const mongoose = require('mongoose');
 
-class MockupServer extends MongoMemoryServer{
+class MongoMockupServer extends MongoMemoryServer{
     constructor() {
         super();
         this.setup();
@@ -34,4 +34,5 @@ class MockupServer extends MongoMemoryServer{
         }
     }
 }
-module.exports = MockupServer;
+
+module.exports = MongoMockupServer;
