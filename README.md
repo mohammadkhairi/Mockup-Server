@@ -1,4 +1,4 @@
-# Mongodb Mockup Server Packages
+# Mongodb Mockup Server Package
 
 ## Purpose
 The purpose of this package is to make it easier to use mockup server for unit testing
