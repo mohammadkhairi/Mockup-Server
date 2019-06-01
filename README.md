@@ -7,7 +7,7 @@ The purpose of this package is to make it easier to use mockup server for unit t
 ``npm install https://github.com/mohammadkhairi/Mockup-Server.git``
 
 ## How to import
-`` const StandardError = require('mongodb-mockup-server') ``
+`` const MongoMockupServer = require('mongodb-mockup-server') ``
 
 
 ## How To Use
