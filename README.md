@@ -6,15 +6,29 @@ to mock mongodb during testing
 ## Installation
 ``npm install https://github.com/mohammadkhairi/Mockup-Server.git``
 
-## How to import
+## Import
 `` const MongoMockupServer = require('mongodb-mockup-server') ``
 
 
-## How To Use
+# How To Use
 
-### Initialization
+## Initialization
 ``const mongoMockupServer = new MongoMockupServer()``
 
-### Destroy
+### Example
+``
+before(() => {
+  mongoMockupServer = new MongoMockupServer();
+});
+``
+
+## Destroy
 ``mongoMockupServer.cleanup()``
+
+### Example
+``
+after(() => {
+   mongoMockupServer.cleanup();
+});
+``
 
