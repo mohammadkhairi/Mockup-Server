@@ -18,19 +18,19 @@ to mock mongodb during testing
 ``const mongoMockupServer = new MongoMockupServer()``
 
 ### Example
-``
+```
 before(() => {
   mongoMockupServer = new MongoMockupServer();
 });
-``
-<br />
+```
+<br /><br />
 ## Destroy
 ``mongoMockupServer.cleanup()``
 
 ### Example
-``
+```
 after(() => {
    mongoMockupServer.cleanup();
 });
-``
+```
 
