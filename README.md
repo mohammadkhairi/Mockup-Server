@@ -15,24 +15,24 @@ to mock mongodb during testing
 # How To Use
 
 ## Initialization
-``const mongoMockupServer = new MongoMockupServer()``
+``const mongoDBMockupServer = new MongoDBMockupServer()``
 
 ### Example
 ```
 before(() => {
-  mongoMockupServer = new MongoMockupServer();
+  mongoDBMockupServer = new MongoDBMockupServer();
 });
 ```
 
 <br />
 
 ## Destroy
-``mongoMockupServer.cleanup()``
+``mongoDBMockupServer.cleanup()``
 
 ### Example
 ```
 after(() => {
-   mongoMockupServer.cleanup();
+   mongoDBMockupServer.cleanup();
 });
 ```
 
