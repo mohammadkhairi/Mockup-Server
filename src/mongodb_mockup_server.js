@@ -4,35 +4,27 @@ const { MongoMemoryServer } = require('mongodb-memory-server');
 
 const mongoose = require('mongoose');
 
-class MongoMockupServer extends MongoMemoryServer{
-    constructor() {
-        super();
-        this.setup();
-    }
+const mongoMemoryServer = new MongoMemoryServer();
 
-    async setup() { 
-        try {
-            //return promises of connection string
-            const mongoUri = await this.getConnectionString();
+const MongoMockServer = () => {
+    return {
+        // will return a mongodb connection
+        setup: async () => {
+            const mongoUri = await mongoMemoryServer.getConnectionString();
+            return mongoose.connect(mongoUri, { useNewUrlParser: true });
+        },
+        // will cleanup every data
+        cleanup: async () => {
+            mongoose.disconnect();
 
-            //return promise whether the mongoose connection is success or failed(reject)
-            mongoose.connect(mongoUri, { useNewUrlParser: true });
-        }
-        catch (err) {
-            throw err;  
-        }
-    }
-
-    async cleanup() {
-        mongoose.disconnect();
-
-        try {
-            await this.stop();
-        }
-        catch (err) {
-            throw err;
+            try {
+                await mongoMemoryServer.stop();
+            }
+            catch (err) {
+                throw err;
+            }
         }
     }
 }
 
-module.exports = MongoMockupServer;
+module.exports = MongoMockServer;
