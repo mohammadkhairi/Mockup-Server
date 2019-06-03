@@ -1,13 +1,14 @@
 # Mongodb Mockup Server Package
 
-## Purpose
-to mock mongodb during testing
+## Introduction
+`mongodb-mockup-server` is a wrapper package use to wrapped around 'mongodb-memory-server'. This wrapper is to ensure that the code written by the developers will be reduced.
 
 ## Installation
 ``npm install https://github.com/mohammadkhairi/Mockup-Server.git``
 
 ## Import
-`` const MongoMockupServer = require('mongodb-mockup-server') ``
+``` const mongoMockupServer = require('mongodb-mockup-server'); ```
+
 
 
 <br /><br />
@@ -15,19 +16,19 @@ to mock mongodb during testing
 # How To Use
 
 ## Initialization
-``const mongoDBMockupServer = new MongoDBMockupServer()``
+``const mongMockupServer = mongoMockupServer();``
 
 ### Example
 ```
 before(() => {
-  mongoDBMockupServer = new MongoDBMockupServer();
+  mongMockupServer = mongoMockupServer();
 });
 ```
 
 <br />
 
 ## Destroy
-``mongoDBMockupServer.cleanup()``
+``mongMockupServer.cleanup();``
 
 ### Example
 ```

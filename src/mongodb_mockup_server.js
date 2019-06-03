@@ -4,14 +4,14 @@ const { MongoMemoryServer } = require('mongodb-memory-server');
 
 const mongoose = require('mongoose');
 
-const MongoMockServer = () => {
+const mongoMockServer = () => {
     const mongoMemoryServer = new MongoMemoryServer();
 
     return {
         // will return a mongodb connection
         setup: async () => {
             const mongoUri = await mongoMemoryServer.getConnectionString();
-            return mongoose.connect(mongoUri, { useNewUrlParser: true });
+            return mongoose.connect(mongoUri, { useNewUrlParser: true, useFindAndModify: false });
         },
         // will cleanup every data
         cleanup: async () => {
@@ -27,4 +27,4 @@ const MongoMockServer = () => {
     }
 }
 
-module.exports = MongoMockServer;
+module.exports = mongoMockServer;

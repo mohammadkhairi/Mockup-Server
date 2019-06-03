@@ -1,5 +1,5 @@
 'use strict'
 
-const MongoDBMockupServer = require('./src/mongodb_mockup_server');
+const mongoMockServer = require('./src/mongodb_mockup_server');
 
-module.exports = MongoDBMockupServer;
+module.exports = mongoMockServer;
