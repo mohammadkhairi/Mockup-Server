@@ -4,9 +4,9 @@ const { MongoMemoryServer } = require('mongodb-memory-server');
 
 const mongoose = require('mongoose');
 
-const mongoMemoryServer = new MongoMemoryServer();
-
 const MongoMockServer = () => {
+    const mongoMemoryServer = new MongoMemoryServer();
+
     return {
         // will return a mongodb connection
         setup: async () => {
