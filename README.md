@@ -40,7 +40,7 @@ after(() => {
 
 <br />
 
-## Code Example
+## Code Example with mongoose model
 ```
 const mongoMockupServer = mongoMockupServer();
 const connection = await mongoMockupServer.setup();
