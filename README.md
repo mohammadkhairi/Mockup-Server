@@ -38,6 +38,8 @@ after(() => {
 
 ```
 
+<br />
+
 ## Code Example
 ```
 const mongMockupServer = mongoMockupServer();
