@@ -16,24 +16,24 @@
 # How To Use
 
 ## Initialization
-``const mongMockupServer = mongoMockupServer();``
+``const mongoMockupServer = mongoMockupServer();``
 
 ### Example
 ```
 before(() => {
-  mongMockupServer = mongoMockupServer();
+  mongoMockupServer = mongoMockupServer();
 });
 ```
 
 <br />
 
 ## Destroy
-``mongMockupServer.cleanup();``
+``mongoMockupServer.cleanup();``
 
 ### Example
 ```
 after(() => {
-   mongoDBMockupServer.cleanup();
+   mongoMockupServer.cleanup();
 });
 
 ```
