@@ -35,5 +35,13 @@ before(() => {
 after(() => {
    mongoDBMockupServer.cleanup();
 });
+
 ```
 
+## Code Example
+```
+const mongMockupServer = mongoMockupServer();
+const connection = await mongMockupServer.setup();
+
+const model = connection.model('Account', accountSchema);
+```
