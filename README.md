@@ -42,8 +42,8 @@ after(() => {
 
 ## Code Example
 ```
-const mongMockupServer = mongoMockupServer();
-const connection = await mongMockupServer.setup();
+const mongoMockupServer = mongoMockupServer();
+const connection = await mongoMockupServer.setup();
 
 const model = connection.model('Account', accountSchema);
 ```
