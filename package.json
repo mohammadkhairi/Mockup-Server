@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "mongodb-memory-server": "^5.1.2",
-    "mongoose": "^5.5.11",
+    "mongoose": "^5.7.5",
     "save": "^2.4.0"
   }
 }
